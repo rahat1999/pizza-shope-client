@@ -1,0 +1,18 @@
+.notfound-butto{
+  
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 35%;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #da1111;
+        font-family: 'Bungee', cursive;
+        font-size: x-large;
+        text-shadow: 2px 2px greenyellow;
+           
+}

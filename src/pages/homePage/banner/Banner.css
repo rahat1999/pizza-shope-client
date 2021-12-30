@@ -1,0 +1,26 @@
+.banner-text{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Bungee', cursive;
+}
+.banner-text h2{
+    font-size: 3em;
+}
+ @media screen and (max-width:688px) {
+    .banner-text h2{
+        font-size: .8em;
+    }
+ }
+
+.banner-pizza{
+    color: yellow;
+   
+}

@@ -1,0 +1,35 @@
+.footer-container{
+    background-color: #000000e5;
+}
+.footer h4{
+    font-family: 'Bungee', cursive;
+    color: orange;
+    text-shadow: 1px 1px 1px gray;
+}
+
+.footer a{
+    text-decoration: none;
+    font-size: 2em;
+    text-shadow: 1px 1px gray;
+    transition: .8s;
+    line-height: 20px;
+    color: white;
+
+}
+.footer-info h4{
+    font-family: 'Bungee', cursive;
+    color: orange;
+    text-shadow: 1px 1px 1px gray;
+}
+.footer-info p{
+  
+    font-weight: 600;
+    line-height: 10px;
+    color: white;
+}
+
+.end-text{
+    color: rgb(107, 106, 106);
+    font-weight: 600;
+    text-align: center;
+}

@@ -1,0 +1,60 @@
+.nav-container{
+    background-color: #000000e5;
+}
+
+.Navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center
+}
+
+.nav-title{
+    font-family: 'Playball', cursive;
+    color: yellow;
+}
+
+.nav-list ul{
+    display: flex;
+   
+}
+.nav-item li{
+    display: block;
+    list-style: none;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+    transition: .5s;
+
+
+}
+.nav-item li:hover{
+   color: yellow;
+   cursor: pointer;
+   }
+.nav-item li:active{
+color: red;
+   }
+
+   .nav-icon{
+       display: none;
+       color: white;
+       margin: 0 10px;
+   }
+
+
+   @media only screen and (max-width: 600px) {
+    .nav-item li{
+        display: none;
+       }
+    .nav-icon{
+        display: block;
+    }
+    .nav-icon:active{
+        color: yellow;
+       }
+       .ofcanvas{
+        max-width: 200px;    }
+   }

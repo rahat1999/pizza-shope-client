@@ -1,0 +1,9 @@
+.back-btn a{
+    text-decoration: none;
+    background: orangered;
+    padding:6px 15px;
+    margin: 5px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+}
