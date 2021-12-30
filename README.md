@@ -1,8 +1,9 @@
-# Getting Started with Create React App
+# Skyline Pizza
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ [Skyline Pizza Live site](https://skyline-pizza.web.app/).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+* This website made by Javascripte,React Boostrap, React js, Firebase Authentication, ,React Hook, Node JS, express, mongoDB,JWT;
