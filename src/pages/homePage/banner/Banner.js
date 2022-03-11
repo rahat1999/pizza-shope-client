@@ -8,8 +8,8 @@ const Banner = () => {
             <Card.Img src={Bg} alt="Card image" />
             <Card.ImgOverlay>
                 <div className='banner-text'>
-                    <h2>UnLimited <br />
-                        Delicious <span className='banner-pizza'>Pizza !!</span></h2>
+                    <h1>UnLimited <br />
+                        Delicious <span className='banner-pizza'>Pizza !!</span></h1>
                 </div>
 
             </Card.ImgOverlay>

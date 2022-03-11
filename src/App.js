@@ -19,6 +19,8 @@ import BookingOrder from './pages/homePage/bookingOrder/BookingOrder';
 import UserOrder from './pages/DashboardPage/userOrder/UserOrder';
 import Explore from './pages/explore/Explore';
 import CoustomerReview from './pages/DashboardPage/coustomerReview/CoustomerReview';
+import MakeAdmin from './pages/DashboardPage/MakeAdmin/MakeAdmin';
+
 
 function App() {
   return (
@@ -46,12 +48,16 @@ function App() {
             <Route exact path="/dashboard/addProduct">
               <AddProduct />
             </Route>
+            <Route exact path="/dashboard/makeAdmin">
+              <MakeAdmin />
+            </Route>
             <Route exact path="/dashboard/userOrder">
               <UserOrder />
             </Route>
             <Route exact path="/dashboard/review">
               <CoustomerReview />
             </Route>
+
             <Route exact path="/login">
               <Login />
             </Route>

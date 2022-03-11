@@ -18,7 +18,7 @@ const Explore = () => {
     }, [])
     return (
         <Container className='my-4'>
-            <h2 className='text-warning text-center'>Products</h2>
+            <h2 className='text-center'>Products</h2>
             <br />
             {
                 loading ? <div>
@@ -32,7 +32,7 @@ const Explore = () => {
                                         <div>
                                             <p>{food.price} Tk </p>
                                             <Link to={`/addTocard/${food?._id}`}>
-                                                <Button variant='warning'>Add To Card</Button>
+                                                <Button variant='warning'><i className="fa-solid fa-cart-shopping"></i> Add To Card</Button>
                                             </Link>
                                         </div>
                                     </Card.Body>

@@ -19,21 +19,21 @@ const Products = () => {
 
     return (
         <Container className='my-4'>
-            <h2 className='text-warning text-center'>Product</h2>
+            <h2 className='text-center'>Products</h2>
             <br />
             {
                 loading ? <div>
                     <Row xs={1} md={4} className="g-3">
                         {
                             foods.slice(0, 6).map(food => <Col key={food._id} >
-                                <Card style={{ height: "350px", boxShadow: "1px 1px 4px 1px gray" }}>
-                                    <Card.Img variant="top" style={{ height: "200px" }} src={`data:image/jpeg;base64,${food.image}`} />
+                                <Card style={{ height: "350px", boxShadow: ".5px .5px 4px 1px gray" }}>
+                                    <Card.Img className='' variant="top" style={{ height: "200px" }} src={`data:image/jpeg;base64,${food.image}`} />
                                     <Card.Body>
                                         <Card.Title>{food?.foodName}</Card.Title>
                                         <div>
                                             <p>{food.price} Tk </p>
                                             <Link to={`/addTocard/${food?._id}`}>
-                                                <Button variant='warning'>Add To Card</Button>
+                                                <Button variant='warning'><i className="fa-solid fa-cart-shopping text-dark"> </i> Add To Card</Button>
                                             </Link>
                                         </div>
                                     </Card.Body>

@@ -19,7 +19,7 @@ const Review = () => {
 
     return (
         <Container className='my-5 '>
-            <h2 className='text-center text-warning'>Reviews</h2>
+            <h2 className='text-center'>Reviews</h2>
             <br />
             {loading ? <Row xs={1} md={1} className="g-3 shadow">
                 {

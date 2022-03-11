@@ -14,6 +14,10 @@ const Dashboard = ({ handleClose, show }) => {
                     <Link to="/dashboard/addProduct">
                         <li>Add Product </li>
                     </Link>
+                    <Link to="/dashboard/makeAdmin">
+                        <li>Make Admin </li>
+                    </Link>
+
                     <Link to="/dashboard/userOrder">
                         <li>My Order </li>
                     </Link>

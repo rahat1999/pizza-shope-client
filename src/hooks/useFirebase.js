@@ -30,7 +30,7 @@ const useFirebase = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
-                // saveUserToDB(user.email, user.displayName, 'PUT')
+                saveUserToDB(user.email, user.displayName, 'PUT')
                 const destination = location.state?.from || '/';
                 history.replace(destination)
                 setErrorMsg('')
@@ -66,7 +66,7 @@ const useFirebase = () => {
                 const newUser = { email, displayName: name }
                 setUser(newUser)
                 /*----save user to the Database ---*/
-                // saveUserToDB(email, name, 'POST')
+                saveUserToDB(email, name, 'POST')
 
                 /*=== send name to firebase after creation ===*/
                 updateProfile(auth.currentUser, {
@@ -82,6 +82,20 @@ const useFirebase = () => {
                 setAuthError(error.message)
             })
             .finally(() => setIsLoading(false))
+    }
+
+    /* =======Save user email and user name into DB===== */
+    const saveUserToDB = (email, displayName, method) => {
+        const user = { email, displayName };
+        fetch('http://localhost:8000/users', {
+            method: method,
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('kaka', data);
+            })
     }
 
 

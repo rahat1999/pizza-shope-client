@@ -6,3 +6,8 @@
 body{
     font-family: 'Roboto Condensed', sans-serif;
 }
+h2{
+    font-family: 'Bungee', cursive;
+    text-shadow: 1px 1px gray;
+    color: orange;
+}

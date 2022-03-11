@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../sharedPage/footer/Footer';
 import Banner from '../banner/Banner';
+import OurStaff from '../OurStaff/OurStaff';
 import Products from '../products/Products';
 import Review from './../review/Review';
 
@@ -10,6 +11,7 @@ const Home = () => {
         <div>
             <Banner />
             <Products />
+            <OurStaff />
             <Review />
             <Footer />
 

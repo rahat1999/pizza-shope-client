@@ -20,9 +20,9 @@ const Footer = () => {
                     <Col>
                         <div className='footer-info'>
                             <h4>Contact us!</h4>
-                            <p>Address: Dhanmodi 24/12</p>
-                            <p>Contact: +9384923343</p>
-                            <p>Email: pizzahut@gmail.com</p>
+                            <p><i className="fa-solid fa-location-dot"></i>  Dhanmodi 24/12</p>
+                            <p><i className="fa-solid fa-phone"></i>  +9384923343</p>
+                            <p><i className="fa-solid fa-envelope"></i>  pizzahut@gmail.com</p>
 
                         </div>
                     </Col>
