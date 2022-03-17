@@ -1,9 +1,10 @@
 import React from 'react';
 import { Offcanvas } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from './../../../hooks/useAuth';
 
 const Dashboard = ({ handleClose, show }) => {
-
+    const { isAdmin } = useAuth()
     return (
         <div>
             <Offcanvas className='ofcanvas' show={show} onHide={handleClose}>
@@ -11,19 +12,31 @@ const Dashboard = ({ handleClose, show }) => {
                     <Offcanvas.Title>Admin and Users DashBoard</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <Link to="/dashboard/addProduct">
-                        <li>Add Product </li>
-                    </Link>
-                    <Link to="/dashboard/makeAdmin">
-                        <li>Make Admin </li>
-                    </Link>
+                    {
+                        isAdmin ? <div>
+                            <Link to="/dashboard/allOrders">
+                                <li>All Order </li>
+                            </Link>
+                            <Link to="/dashboard/addProduct">
+                                <li>Add Product </li>
+                            </Link>
+                            <Link to="/dashboard/makeAdmin">
+                                <li>Make Admin </li>
+                            </Link>
+                        </div>
+                            :
+                            <div>
+                                <Link to="/dashboard/userOrder">
+                                    <li>My Order </li>
+                                </Link>
+                                <Link to="/dashboard/review">
+                                    <li>Review </li>
+                                </Link>
+                            </div>
 
-                    <Link to="/dashboard/userOrder">
-                        <li>My Order </li>
-                    </Link>
-                    <Link to="/dashboard/review">
-                        <li>Review </li>
-                    </Link>
+                    }
+
+
                 </Offcanvas.Body>
             </Offcanvas>
         </div>

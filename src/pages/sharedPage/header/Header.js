@@ -37,12 +37,12 @@ const Header = () => {
                                 </Link>
                             </div>
 
-                            <div className="nav-item">
+                            {/* <div className="nav-item">
                                 <Link to='/massage'>
                                     <FontAwesomeIcon className='nav-icon' icon={faCommentDots} />
                                     <li>Massage</li>
                                 </Link>
-                            </div>
+                            </div> */}
 
 
                             {user.email && <div className="nav-item">

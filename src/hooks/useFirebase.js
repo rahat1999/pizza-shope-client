@@ -22,6 +22,7 @@ const useFirebase = () => {
     const [authError, setAuthError] = useState('')
     const [isLoading, setIsLoading] = useState(true);
     const [errorMsg, setErrorMsg] = useState('');
+    const [isAdmin, setIsAdmin] = useState()
 
     /* =============Goole singup=========== */
     const googleLogin = (location, history) => {
@@ -87,7 +88,7 @@ const useFirebase = () => {
     /* =======Save user email and user name into DB===== */
     const saveUserToDB = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:8000/users', {
+        fetch('https://cryptic-shore-66845.herokuapp.com/users', {
             method: method,
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)
@@ -97,7 +98,12 @@ const useFirebase = () => {
                 console.log('kaka', data);
             })
     }
-
+    //*-----find admin----*//
+    useEffect(() => {
+        fetch(`https://cryptic-shore-66845.herokuapp.com/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setIsAdmin(data.admin))
+    }, [user.email])
 
     /*======== logout ================*/
     const logOut = () => {
@@ -136,6 +142,7 @@ const useFirebase = () => {
     return {
         user,
         logOut,
+        isAdmin,
         errorMsg,
         isLoading,
         authError,

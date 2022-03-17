@@ -1,3 +1,7 @@
+.banner-image{
+    width: 100vh;
+    height: 100vh;
+}
 .banner-text{
     display: flex;
     position: absolute;
@@ -15,8 +19,12 @@
     font-size: 3em;
    }
  @media screen and (max-width:688px) {
-    .banner-text h2{
-        font-size: .8em;
+    .banner-image{
+        width: 35vh;
+        height: 30vh;
+    }
+    .banner-text h1{
+        font-size: 1em;
     }
  }
 

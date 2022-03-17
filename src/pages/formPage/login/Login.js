@@ -9,7 +9,7 @@ import useAuth from './../../../hooks/useAuth';
 
 const Login = () => {
     const { user, isLoading, errorMsg, googleLogin, loginWithEmailAndPassword } = useAuth()
-    console.log(user.email, 'userf');
+    // console.log(user.email, 'userf');
     const location = useLocation()
     const history = useHistory()
 

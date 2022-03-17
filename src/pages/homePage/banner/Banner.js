@@ -5,7 +5,7 @@ import './Banner.css'
 const Banner = () => {
     return (
         <Card className="bg-dark text-white">
-            <Card.Img src={Bg} alt="Card image" />
+            <Card.Img className='banner-image' src={Bg} alt="Card image" />
             <Card.ImgOverlay>
                 <div className='banner-text'>
                     <h1>UnLimited <br />

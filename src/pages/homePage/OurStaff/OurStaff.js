@@ -49,7 +49,7 @@ const OurStaff = () => {
 
                     {
                         staffs.map(staff =>
-                            <Col>
+                            <Col key={staff.id}>
                                 <Card className='shadow'>
                                     <Card.Img variant="top" src={staff.img} />
                                     <Card.Body className='text-center'>
@@ -59,9 +59,10 @@ const OurStaff = () => {
                                             {staff.about}
                                         </Card.Text>
                                         <ul>
-                                            <span className='ms-2 text-danger fs-5'><i className="fa-brands fa-facebook-f"></i></span>
-                                            <span className='ms-2 text-danger fs-5'><i className="fa-brands fa-twitter"></i></span>
-                                            <span className='ms-2 text-danger fs-5'><i className="fa-brands fa-instagram"></i></span>
+                                            <a href="#" className='text-danger fs-5'><i className="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#" className='mx-4 text-danger fs-5'><i className="fa-brands fa-twitter"></i></a>
+                                            <a href="#" className='text-danger fs-5'><i className="fa-brands fa-instagram"></i></a>
+
                                         </ul>
                                     </Card.Body>
                                 </Card>

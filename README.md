@@ -1,6 +1,8 @@
 # Skyline Pizza
 
  [Skyline Pizza Live site](https://skyline-pizza.web.app/).
+ ## Admin Email :programminghero@gmail.com
+## Pass:123456
 
 ## Available Scripts
 

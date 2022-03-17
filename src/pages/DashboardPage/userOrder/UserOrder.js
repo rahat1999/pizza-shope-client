@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Table } from 'react-bootstrap';
+import { Container, Table, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useAuth from './../../../hooks/useAuth';
 import './UserOrder.css'
 
@@ -24,6 +25,7 @@ const UserOrder = () => {
                         <th>#</th>
                         <th>Name</th>
                         <th>Products</th>
+                        <th>Payment</th>
                         <th className="text-center"> Status</th>
                         <th className="text-center"> Order</th>
                     </tr>
@@ -42,23 +44,29 @@ const UserOrder = () => {
                                     </b>
                                     <br />
                                     <span>Order Date: {order.date}</span>
-
                                     <p>{order.price}$</p>
-
+                                    {order._id}
+                                </td>
+                                <td className="text-center">
+                                    {
+                                        order?.payment ? <strong className='bg-success px-4 py-2 rounded text-white'>PAID</strong>
+                                            :
+                                            <Link to={`/dashboard/payment/${order._id}`}>
+                                                <Button variant='warning'><i className="fa-solid fa-wallet"></i> Please Pay</Button>
+                                            </Link>
+                                    }
                                 </td>
                                 <td className="text-center">
                                     <b>{order.status}</b>
                                 </td>
                                 <td className="text-center">
-                                    delet
-                                    {/* <Button
-                                        onClick={() => handelOrder(order._id)} variant="danger"><CancelOutlinedIcon /> Cancel</Button> */}
+                                    <Button variant="danger"><i className="fa-solid fa-trash-can m-2"></i></Button>
                                 </td>
                             </tr>)
                     }
                 </tbody>
             </Table>
-        </Container>
+        </Container >
     );
 };
 

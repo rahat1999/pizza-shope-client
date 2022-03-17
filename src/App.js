@@ -6,7 +6,7 @@ import {
   Switch
 } from "react-router-dom";
 import Header from './pages/sharedPage/header/Header';
-import Massage from './pages/massangerPage/Massage';
+// import Massage from './pages/massangerPage/Massage';
 import Dashboard from './pages/DashboardPage/dashboard/Dashboard';
 import NotFound from './pages/sharedPage/notFound/NotFound';
 
@@ -20,6 +20,8 @@ import UserOrder from './pages/DashboardPage/userOrder/UserOrder';
 import Explore from './pages/explore/Explore';
 import CoustomerReview from './pages/DashboardPage/coustomerReview/CoustomerReview';
 import MakeAdmin from './pages/DashboardPage/MakeAdmin/MakeAdmin';
+import AllOrders from './pages/DashboardPage/AllOrders/AllOrders';
+import Payment from './pages/DashboardPage/Payment/Payment';
 
 
 function App() {
@@ -32,9 +34,9 @@ function App() {
             <Route exact path="/" >
               <Home />
             </Route>
-            <PrivateRoute exact path="/massage" >
+            {/* <PrivateRoute exact path="/massage" >
               <Massage />
-            </PrivateRoute>
+            </PrivateRoute> */}
 
             <Route exact path="/explore" >
               <Explore />
@@ -48,11 +50,17 @@ function App() {
             <Route exact path="/dashboard/addProduct">
               <AddProduct />
             </Route>
+            <Route exact path="/dashboard/allOrders">
+              <AllOrders />
+            </Route>
             <Route exact path="/dashboard/makeAdmin">
               <MakeAdmin />
             </Route>
             <Route exact path="/dashboard/userOrder">
               <UserOrder />
+            </Route>
+            <Route exact path="/dashboard/payment/:paymentId">
+              <Payment />
             </Route>
             <Route exact path="/dashboard/review">
               <CoustomerReview />
